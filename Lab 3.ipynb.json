@@ -1,0 +1,42 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "![](ER.png)\n",
+    "\n",
+    "The database includes two types of animals, fish and pets. The type of fish is a primary key in the database and is attributed by food, tank number, price, IDCode (barcode), and whether it is a salt water or fresh water fish. The foreign key in this entity is the tank number because this is what the fish live in. The tank does not have any relationship with any entity other than fish. The fish eat food which is another entity in our ER diagram and is attributed by price, animal type, and brand. There are no foreign keys in this entity but the primary key, ID code, is used to look up the ID code within food transactions, which is a foreign key. Food transactions are attributed by price, quantity, customer ID, ID code and whether the customer has any coupons. Within this, the customer ID is a foreign key used to help us find whether or not the customer is in the loyalty program. The loyalty program is attributed by details of the customer’s personal information including their birthday (they get a coupon on their birthday as part of being in the loyalty program), phone number, email, and whether they have any coupons. The Customer ID is also a foreign key to find animal (pet/fish) transactions. These transactions are attributed price, quantity, customer ID, ID code, and coupon. If you go back to the very beginning, one of the main entities is the animals other than fish; pets. The primary key for pets is what type of animal it is and is then attributed by ID code, Enclosure number, price, and food. It’s foreign key, enclosure number, is used to look up the type of enclosure that the animal lives in. The enclosure is attributed to animal type and size, and does not have a relationship with any other entity. When customers purchase a pet, it is used to look up the pet/food transactions as mentioned before with when customers purchase fish. As seen in our ER diagram, the entity for food has a relationship with many entities, including pets since they eat the food. Lastly, the food purchases are captured by an expense report. The expenses have the primary key of cost and are attributed by markup, brand, and looked up by its foreign key ID code.\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
